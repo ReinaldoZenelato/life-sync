@@ -6,7 +6,7 @@
 
 ## Branch sugerida
 
-`feat/user-profile-and-health-goals`
+`task-004`
 
 ## Objetivo
 
@@ -43,6 +43,8 @@ Implementar a base funcional de perfil de saúde do usuário e cálculo automát
 ## Observações para o agente executor
 
 - Ao concluir a task, atualizar o campo `Status` neste arquivo.
+- Executar esta task na branch `task-004`; se ela já existir, fazer checkout nela, e se não existir, criá-la antes de começar.
 - Manter a regra de cálculo desacoplada da persistência.
 - Evitar misturar lógica de perfil com futura lógica de refeições.
+- Respeitar a estratégia de exclusão lógica definida para tabelas importantes do domínio.
 - Entregar resumo final com endpoints criados, estrutura persistida e regras validadas.
