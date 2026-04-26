@@ -6,7 +6,7 @@
 
 ## Branch sugerida
 
-`feat/real-authentication`
+`task-003`
 
 ## Objetivo
 
@@ -46,6 +46,8 @@ Implementar autenticação real no back-end do LifeSync com persistência em ban
 ## Observações para o agente executor
 
 - Ao concluir a task, atualizar o campo `Status` neste arquivo.
+- Executar esta task na branch `task-003`; se ela já existir, fazer checkout nela, e se não existir, criá-la antes de começar.
 - Reutilizar a arquitetura atual do módulo de auth, sem inflar o escopo.
 - Garantir que o fluxo continue alinhado com Swagger limpo e SRP.
+- Respeitar a estratégia de exclusão lógica definida na modelagem de dados.
 - Entregar resumo final com contratos alterados, regras implementadas e testes adicionados.

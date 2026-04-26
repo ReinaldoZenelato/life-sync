@@ -6,7 +6,7 @@
 
 ## Branch sugerida
 
-`feat/database-migrations-foundation`
+`task-001`
 
 ## Objetivo
 
@@ -50,6 +50,7 @@ Preparar a fundação de banco de dados do back-end do LifeSync com PostgreSQL, 
 ## Observações para o agente executor
 
 - Ao concluir a task, atualizar o campo `Status` neste arquivo.
+- Executar esta task na branch `task-001`; se ela já existir, fazer checkout nela, e se não existir, criá-la antes de começar.
 - Assumir que qualquer tentativa anterior pode ser revertida e, portanto, a task deve ser implementada como fundação limpa.
 - Manter o escopo estritamente técnico e estrutural.
 - Entregar resumo final com arquivos alterados, scripts criados e instruções de uso.
