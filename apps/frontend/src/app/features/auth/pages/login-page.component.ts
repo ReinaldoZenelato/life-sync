@@ -3,11 +3,12 @@ import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
+import { FormFieldErrorComponent } from '../../../shared/ui/form-field-error/form-field-error.component';
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, FormFieldErrorComponent],
   template: `
     <section class="grid min-h-screen lg:grid-cols-[1.15fr_0.85fr]">
       <div class="relative hidden overflow-hidden bg-ink px-10 py-12 text-white lg:block">
@@ -39,14 +40,24 @@ import { AuthService } from '../../../core/services/auth.service';
           <form class="space-y-5 rounded-[2rem] bg-white p-8 shadow-glow" [formGroup]="form" (ngSubmit)="submit()">
             <label class="block">
               <span class="mb-2 block text-sm font-medium text-ink">E-mail</span>
-              <input class="w-full rounded-2xl border border-ink/10 bg-sand px-4 py-3 outline-none transition focus:border-leaf"
-                type="email" formControlName="email" placeholder="rz@lifesync.dev" />
+              <input
+                class="w-full rounded-2xl border bg-sand px-4 py-3 outline-none transition"
+                type="email"
+                formControlName="email"
+                placeholder="rz&#64;lifesync.dev"
+              />
+              <app-form-field-error [control]="form.controls.email" label="E-mail" />
             </label>
 
             <label class="block">
               <span class="mb-2 block text-sm font-medium text-ink">Senha</span>
-              <input class="w-full rounded-2xl border border-ink/10 bg-sand px-4 py-3 outline-none transition focus:border-leaf"
-                type="password" formControlName="password" placeholder="Sua senha segura" />
+              <input
+                class="w-full rounded-2xl border bg-sand px-4 py-3 outline-none transition"
+                type="password"
+                formControlName="password"
+                placeholder="Sua senha segura"
+              />
+              <app-form-field-error [control]="form.controls.password" label="Senha" />
             </label>
 
             @if (errorMessage()) {

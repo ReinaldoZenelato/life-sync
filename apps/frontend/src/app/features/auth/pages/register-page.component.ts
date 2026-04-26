@@ -3,11 +3,12 @@ import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
+import { FormFieldErrorComponent } from '../../../shared/ui/form-field-error/form-field-error.component';
 
 @Component({
   selector: 'app-register-page',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, FormFieldErrorComponent],
   template: `
     <section class="min-h-screen bg-[linear-gradient(180deg,_#f4efe6_0%,_#ffffff_48%,_#eef7f1_100%)] px-6 py-10 md:px-10">
       <div class="mx-auto max-w-6xl">
@@ -30,20 +31,35 @@ import { AuthService } from '../../../core/services/auth.service';
             <div class="mt-8 grid gap-5">
               <label class="block">
                 <span class="mb-2 block text-sm font-medium text-ink">Nome</span>
-                <input class="w-full rounded-2xl border border-ink/10 bg-sand px-4 py-3 outline-none transition focus:border-leaf"
-                  type="text" formControlName="name" placeholder="Reinaldo Z" />
+                <input
+                  class="w-full rounded-2xl border bg-sand px-4 py-3 outline-none transition"
+                  type="text"
+                  formControlName="name"
+                  placeholder="Reinaldo Z"
+                />
+                <app-form-field-error [control]="form.controls.name" label="Nome" />
               </label>
 
               <label class="block">
                 <span class="mb-2 block text-sm font-medium text-ink">E-mail</span>
-                <input class="w-full rounded-2xl border border-ink/10 bg-sand px-4 py-3 outline-none transition focus:border-leaf"
-                  type="email" formControlName="email" placeholder="rz@lifesync.dev" />
+                <input
+                  class="w-full rounded-2xl border bg-sand px-4 py-3 outline-none transition"
+                  type="email"
+                  formControlName="email"
+                  placeholder="rz&#64;lifesync.dev"
+                />
+                <app-form-field-error [control]="form.controls.email" label="E-mail" />
               </label>
 
               <label class="block">
                 <span class="mb-2 block text-sm font-medium text-ink">Senha</span>
-                <input class="w-full rounded-2xl border border-ink/10 bg-sand px-4 py-3 outline-none transition focus:border-leaf"
-                  type="password" formControlName="password" placeholder="No minimo 8 caracteres" />
+                <input
+                  class="w-full rounded-2xl border bg-sand px-4 py-3 outline-none transition"
+                  type="password"
+                  formControlName="password"
+                  placeholder="No minimo 8 caracteres"
+                />
+                <app-form-field-error [control]="form.controls.password" label="Senha" />
               </label>
             </div>
 
