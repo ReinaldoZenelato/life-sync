@@ -2,7 +2,7 @@
 
 ## Status
 
-`todo`
+`done`
 
 ## Branch sugerida
 
@@ -49,6 +49,7 @@ Preparar a fundação de banco de dados do back-end do LifeSync com PostgreSQL, 
 
 ## Observações para o agente executor
 
+- Ao concluir a task, atualizar o campo `Status` neste arquivo.
 - Assumir que qualquer tentativa anterior pode ser revertida e, portanto, a task deve ser implementada como fundação limpa.
 - Manter o escopo estritamente técnico e estrutural.
 - Entregar resumo final com arquivos alterados, scripts criados e instruções de uso.

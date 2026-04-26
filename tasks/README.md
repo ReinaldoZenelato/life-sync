@@ -38,5 +38,6 @@ Cada task deve conter:
 
 1. Criar a task nesta pasta.
 2. Delegar a execução para outra branch.
-3. Validar a entrega.
-4. Atualizar o status da task.
+3. Ao concluir a execução, atualizar o status no próprio arquivo da task.
+4. Validar a entrega.
+5. Atualizar o status final da task, se necessário.
